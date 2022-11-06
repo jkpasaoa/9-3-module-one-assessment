@@ -95,7 +95,17 @@ return totalRating / allMovieRating
  *  countByRating(movies);
  *  //> { G: 3, PG: 7 }
  */
-function countByRating() {}
+function countByRating(movies) {
+// let movieRatings = {}
+// if (!movies.length) {
+//   return movieRatings
+// }
+// for (i = 0; i < movies.length; i++) {
+//   if (movieRatings[movies[i].rated]) {
+//     movieRatings[movies[i].rated
+//   }
+// }
+}
 
 /**
  * findById()
@@ -111,7 +121,18 @@ function countByRating() {}
       // Toy Story 4
     };
  */
-function findById() {}
+function findById(movies, id) {
+  let movieWithID = null
+  if (!movies.length) {
+    return movieWithID
+  }
+  for (let i = 0; i < movies.length; i++) {
+    if (movies[i].imdbID === id) {
+      return movies[i]
+    }
+  }
+  return movieWithID
+}
 
 /**
  * filterByGenre()
