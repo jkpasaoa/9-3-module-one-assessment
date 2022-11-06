@@ -96,15 +96,19 @@ return totalRating / allMovieRating
  *  //> { G: 3, PG: 7 }
  */
 function countByRating(movies) {
-// let movieRatings = {}
-// if (!movies.length) {
-//   return movieRatings
-// }
-// for (i = 0; i < movies.length; i++) {
-//   if (movieRatings[movies[i].rated]) {
-//     movieRatings[movies[i].rated
-//   }
-// }
+let movieRatings = {}
+if (!movies.length) {
+  return movieRatings
+}
+for (i = 0; i < movies.length; i++) {
+let keyMovieRatings = movies[i].rated //create key
+if (movieRatings[keyMovieRatings]) {
+  movieRatings[keyMovieRatings] += 1 //incremental
+  } else {
+    movieRatings[keyMovieRatings] = 1 
+    }
+  }
+  return movieRatings
 }
 
 /**
